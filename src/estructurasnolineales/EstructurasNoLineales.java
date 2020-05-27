@@ -8,10 +8,7 @@ package estructurasnolineales;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
-/**
- *
- * @author samaniw
- */
+
 public class EstructurasNoLineales {
 
     /**
@@ -125,9 +122,9 @@ public class EstructurasNoLineales {
         System.out.println(maxData.getDataHeap());
         System.out.println("");
         
-        ///TALLER GRAFOS
-        System.out.println("----------TALLER GRAFOS---------");
-        Graph NodosG = new Graph(4);// Grafo para validar punto 1 y 2
+        ///TALLER DE GRAFOS
+        System.out.println("TALLER DE GRAFOS");
+        Graph NodosG = new Graph(4);
         NodosG.addEdge(0, 1);
         NodosG.addEdge(0, 2);
         NodosG.addEdge(0, 3);
@@ -135,19 +132,19 @@ public class EstructurasNoLineales {
         NodosG.addEdge(2, 0);
         NodosG.addEdge(3, 0);
 
-        Graph NodosArco = new Graph(4);// Grafo para validar punto 3
+        Graph NodosArco = new Graph(4);
         NodosArco.addEdge(0, 1);
         NodosArco.addEdge(1, 2);
         NodosArco.addEdge(2, 0);
         
         System.out.println("");
-        System.out.print("Lista de adyacencia => ");//PUNTO 1
-        NodosG.Profundidad(0);
+        System.out.print("Lista de adyacencia");
+        NodosG.RecProfundidad(0);
 
-        System.out.println("\n" + "Tiene el mismo numero de entradas y salidas? => " + NodosG.EntradasySalidas()); //PUNTO 2
+        System.out.println("\n" + "El numero de entradas es igual al de salidas => " + NodosG.NumInOut()); 
 
-        System.out.print("Arcos faltantes => "); // PUNTO 3
-        NodosArco.arcos();
+        System.out.print("Arcos faltantes => "); 
+        NodosArco.Arcos();
     }
 
 }

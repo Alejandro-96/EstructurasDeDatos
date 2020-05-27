@@ -95,23 +95,23 @@ public class Graph {
         }
     }
     
-    public void Profundidad(int posicion){
+    public void RecProfundidad(int posicion){
     boolean Visitado[] = new boolean[totalNodes];
-    Profundidad(posicion, Visitado);
+    RecProfundidad(posicion, Visitado);
    }
    
-   private void Profundidad(int posicion, boolean Visitado[]){
+   private void RecProfundidad(int posicion, boolean Visitado[]){
        Visitado[posicion] = true;      
        for(int v : aList[posicion]){
            System.out.print(posicion + " ");
            if (!Visitado[v]) {
-               Profundidad(v, Visitado);
+               RecProfundidad(v, Visitado);
            }
        }
    }
    
    
-    public boolean EntradasySalidas() {
+    public boolean NumInOut() {
 
         boolean funciona = true;
         for (int i = 0; i < totalNodes; i++) {
@@ -123,7 +123,7 @@ public class Graph {
                 }
             }
 
-            if (cont != EntradasySalidas2(i)) {
+            if (cont != NumInOut2(i)) {
 
                 funciona = false;
 
@@ -137,7 +137,7 @@ public class Graph {
 
     }
    
-    private int EntradasySalidas2(int k) {
+    private int NumInOut2(int k) {
 
         int cont = 0;
         for (int i = 0; i < totalNodes; i++) {
@@ -155,7 +155,7 @@ public class Graph {
     
     
     
-    public void arcos() {
+    public void Arcos() {
         System.out.print("[");
         for (int i = 0; i < totalNodes; i++) {
             for (int j = 0; j < totalNodes; j++) {
